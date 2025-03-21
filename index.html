@@ -1,164 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	 <title>Sharini's Portfolio</title>
-	 <link rel="stylesheet" href="stylesheet.css">
-	 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.15"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharini's Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-    <header class="header">
-	  <a href="#" class="logo">Portfolio</a>
-	  
-	  <nav class="navbar">
-	     <a href="#home" >Home</a>
-		 <a href="#about" >About</a>
-		 <a href="#skill" >Skills</a>
-		 <a href="#certificates" >Certifications</a>
-		 <a href="#projects" >Projects</a>
-		 <a href="#contact" >Contact</a>
-	  </nav>
-	</header>
-	<section class="home" id="home">
-		<div class="home-content">
-			<h3>Hello, I'm </h3>
-			<h1>Sharini Rithigaa Baranisrinivasan Sumalatha</h1>
-			<h3>And I'm a <span class="text"></span></h3>
-			<p>Hungry to learn, hungrier to apply the learnt.... Give me any task, I can make it work.....! :)</p>
-		
-		</div>
-	</section>
-	
-	<section class="about" id="about">
-    <div class="about-img">
-        <img src="Images/My_Prof_Photo.jpg" alt="It's Me">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
     </div>
-	<div class="about-text">
-		<h2>About<span>Me</span></h2>
-		<h4>Software Developer, Tester & Student </h4>
-		<p>Self-motivated, proactive, and hands-on engineer with 2+ years’ experience developing and managing automation scripts for software development and testing at Accenture Solutions Pvt., Ltd. 
-		Currently pursuing a Master’s in Electrical and Computer Engineering at University of Ottawa. 
-		Energetic team player with strong organizational skills and history of driving user-based testing initiatives. 
-		Professional coordinator adept at heading implementation projects including cross-departmental collaboration, test case creation, defect identification, automation script development, and SQL operations. 
-		Renowned for keeping up to date on the latest technologies and continually improving processes. Proficient in various programming languages like Java, Python, Javascript, C, C++, HTML, and CSS. 
-		Seeking for an opportunity to enhance my skills in more spectrum of software engineering. 
-        </p>
-	</div>
-</section>
-<section>
-		<div class="services" id="skill">
-			<div class="container">
-				<h1 class="sub-title">My<span>Skills</span></h1>
-					<div class="services-list">
-						<div> 
-							<i class=""></i>
-							<h2 class="coding-skills">
-								<span class="neon-text">Coding Skills:</span>
-								<span class="white-text">Java, Python,Javascript, C, C++, HTML, CSS, Automated Software Test Scripting, Robotic Process Automation Development</span>
-							</h2>
-							<h2 class="tools">
-								<span class="neon-text">Tools & Technologies:</span> 
-								<span class="white-text">Selenium, UiPath, Git, Jira, QTest, Jenkins, TestNG, PyTest, Confluence, Rest APIs, Postman, Eclipse IDE, PyCharm, VS Code</span> 
-							</h2>
-							<h2 class="dbms">
-								<span class="neon-text">Database Management:</span> 
-								<span class="white-text">MySQL, Oracle</span>
-							</h2>
-							<h2 class="practices">
-								<span class="neon-text">Methodologies & Practices:</span>
-								<span class="white-text">Agile & Scrum, Software Development Lifecycle, Project Management, Code Development & Maintenance</span>
-							</h2>
-							<h2 class="additional-skills">
-								<span class="neon-text">Additional Skills:</span>
-								<span class="white-text">Hands on Artifical Intelligence / Machine Learning Algorithms (Classification and Clustering Algorithms) and Data Science Applications (ChatBot Implementation)</span>
-							</h2>
-							<h2 class="soft-skills">
-								<span class="neon-text">Soft Skills:</span>
-								<span class="white-text">Collaborative Problem Solver, Analytical Thinker, Team Player, Self-Driven, Excellent written and Oral Communication</span>
-							</h2>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Header -->
+    <header class="header" data-aos="fade-down">
+        <a href="#" class="logo">Sharini</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skill">Skills</a>
+            <a href="#certificates">Certifications</a>
+            <a href="#projects">Projects</a>
+            <a href="#apps">My Apps</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div id="particles-js"></div>
+        <div class="home-content" data-aos="fade-up">
+            <h3>Hello, I'm</h3>
+            <h1>Sharini Rithigaa</h1>
+            <h3>And I'm a <span class="text">Software Developer</span></h3>
+            <p>Innovating with code, leading with passion.</p>
+            <a href="Sharini_Resume.pdf" class="resume-btn" download>Download Resume</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img" data-aos="fade-right">
+            <img src="Images/My_Photo.jpg" alt="It's Me">
+        </div>
+        <div class="about-text" data-aos="fade-left">
+            <h2 class="section-title">About Me</h2>
+            <h4>Software Engineering Professional</h4>
+            <p>Passionate and results-driven Software Engineer with 3+ years of experience in full-stack development, automation testing, and AI-driven chatbot solutions. Adept at building scalable applications, optimizing system performance, and integrating advanced AI technologies, including Multi-Headed RAG, OpenAI GPT-4, and Azure Cognitive Services. Proficient in React, Flask, FastAPI, Selenium, and Docker, with expertise in cloud-based deployment using AWS and Heroku. Strong background in test automation, CI/CD pipelines, and database management (MySQL, MongoDB). Experienced in Agile methodologies, project management, and technical leadership, mentoring student teams and driving collaborative innovation. A proactive problem-solver with a track record of delivering high-impact solutions, improving system efficiency, and contributing to cutting-edge research and development. Dedicated to continuous learning, innovation, and leveraging technology to drive business success.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <h1 class="section-title">My Experience</h1>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                <div class="timeline-content">
+                    <h3>Full Stack Developer Intern at Smart Digital Systems</h3>
+                    <p>2022 - Present</p>
+                    <p>Developed AI-driven medical chatbots using GPT-4 and Multi-Headed RAG, achieving 98% query relevancy. Built voice-enabled systems, reducing booking errors by 40% and handling 100+ users. Optimized vector embeddings retrieval with MongoDB and FAISS, ensuring sub-3-second response times. Integrated React.js, Flask, and Express APIs for seamless front-end and back-end communication. Conducted automated testing with a 100% success rate and deployed applications via Heroku.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                <div class="timeline-content">
+                    <h3>Packaged App Development Analyst (QA & Test Automation Developer) at Accenture Solutions</h3>
+                    <p>2020 - 2022</p>
+                    <p>Developed 800+ automation test cases with a 90% automation rate, implementing Selenium, TestNG, and Jenkins for end-to-end testing. Built UiPath-based automation solutions, improving execution efficiency by 90%. Identified and logged 200+ defects in Citrix and web applications via Jira. Managed 150+ user stories, conducted 100+ regressions, and optimized test coverage by 75%, reducing testing time by 50%. Maintained test scripts, conducted code reviews, and managed Git repositories, ensuring high-quality releases.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                <div class="timeline-content">
+                    <h3>Intern at NLC, India</h3>
+                    <p>2019 - 2020</p>
+                    <p>Developed and customized internal web applications using HTML, CSS, and JavaScript, ensuring compliance with organizational standards. Assisted in content management and optimization for internal systems. Collaborated with the IT team to troubleshoot and enhance website functionality. Implemented automated testing with Selenium and TestNG for quality assurance. Managed version control with Git, enabling seamless team collaboration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="services" id="skill">
+        <div class="container">
+            <h1 class="section-title">My Skills</h1>
+            <div class="services-list">
+                <div class="skill-card" data-aos="fade-right" data-aos-delay="100">
+                    <h2>Languages</h2>
+                    <ul class="skill-list">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>JavaScript/TypeScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-left" data-aos-delay="200">
+                    <h2>Frameworks & Libraries</h2>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>Selenium</li>
+                        <li>Jenkins</li>
+                        <li>UiPath</li>
+                        <li>Cypress</li>
+                        <li>Jira</li>
+                        <li>Postman</li>
+                        <li>REST APIs</li>
+                        <li>Flask</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-right" data-aos-delay="300">
+                    <h2>Development</h2>
+                    <ul class="skill-list">
+                        <li>Full-Stack Development</li>
+                        <li>Test Automation Development</li>
+                        <li>GenAI Applications</li>
+                        <li>AI Solutions</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-left" data-aos-delay="400">
+                    <h2>Databases and Storage</h2>
+                    <ul class="skill-list">
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-right" data-aos-delay="500">
+                    <h2>Testing</h2>
+                    <ul class="skill-list">
+                        <li>Manual and Automated Testing</li>
+                        <li>API Testing</li>
+                        <li>Integration Testing</li>
+                        <li>Database Testing</li>
+                        <li>Unit Testing</li>
+                        <li>End-to-End Testing</li>
+                        <li>Performance Testing</li>
+                        <li>Test Case Design</li>
+                        <li>Test Case Execution</li>
+                        <li>Defect Identification & Tracking</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-left" data-aos-delay="600">
+                    <h2>Cloud and Deployment</h2>
+                    <ul class="skill-list">
+                        <li>Azure Cognitive Services</li>
+                        <li>AWS RDS, AWS ECS, AWS Codepipeline, AWS Amplify</li>
+                        <li>Docker Containerization</li>
+                        <li>Jenkins</li>
+                        <li>Heroku</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-right" data-aos-delay="700">
+                    <h2>Methodologies</h2>
+                    <ul class="skill-list">
+                        <li>Agile</li>
+                        <li>Scrum</li>
+                        <li>Software Development Lifecycle (SDLC)</li>
+                        <li>Project Management</li>
+                        <li>Ethical AI Practices</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-left" data-aos-delay="800">
+                    <h2>Other</h2>
+                    <ul class="skill-list">
+                        <li>Collaborative Problem-Solving</li>
+                        <li>Analytical Thinking</li>
+                        <li>Strong Communication Skills</li>
+                        <li>Flexibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h1 class="section-title">My Projects</h1>
+        <div class="project-carousel">
+            <button class="carousel-arrow prev" aria-label="Previous project">❮</button>
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <div class="project-slide" data-tilt data-aos="fade-right">
+                        <img src="Images/EHospital_Poster.jpg" alt="EHospital">
+                        <div class="project-info">
+                            <h3>EHospital</h3>
+                            <p>AI-driven hospital management system with real-time analytics.<br>
+                               <a href="https://www.e-hospital.ca/" target="_blank" class="project-link">Visit eHospital</a>
+                            </p>
                         </div>
-
-					</div>
-				</div>
-			</div>
-
-<section class="certifications" id="certificates">
-	
-    <h1 class="certifications-title">My<span>Certifications</span></h1>
-    <div class="Certifications-list">
-        <div>
-            
-            <button class="cert-button" data-image="Images/AZ_fundamentals.jpg">Microsoft Certified Azure Fundamentals</button>
-			<button class="cert-button" data-image="Images/AI_Data_Azure.png">Microsoft Certified Azure Data Fundamentals</button>
-			<button class="cert-button" data-image="Images/AI_Data_Azure.png">Microsoft Certified Azure AI Fundamentals</button>
-			<button class="cert-button" data-image="Images/CDART.png">CDART-Diploma in MultiLingual Programming Languages</button>
-			<button class="cert-button" data-image="Images/Coursera_ML.jpg">Coursera Certified- Machine Learning Foundation: A Case study approach</button>
-			<button class="cert-button" data-image="Images/Coursera_Linear_Reg.jpg">Coursera Certified- Linear Regression with NumPy and Python</button>
-			<button class="cert-button" data-image="Images/Coursera_Python_App.jpg">Coursera Certified- Create your first web app with Python and Flask</button>
-			<button class="cert-button" data-image="Images/AI_Data_Azure.png">Microsoft Certified Azure Administrator</button>
+                    </div>
+                    <div class="project-slide" data-tilt data-aos="fade-right">
+                        <img src="Images/BRS_Poster.jpg" alt="Book Recommendation System">
+                        <div class="project-info">
+                            <h3>Book Recommendation System</h3>
+                            <p>An AI-driven book recommendation system using NLP and sentiment analysis.<br>
+                               <a href="https://brs-front-end.vercel.app/" target="_blank" class="project-link">Visit Book Recommendation System</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-slide" data-tilt data-aos="fade-right">
+                        <img src="Images/LostNFound.jpg" alt="Lost and Found Website">
+                        <div class="project-info">
+                            <h3>Lost and Found Website for uOttawa</h3>
+                            <p>Developed a simple Lost & Found website for students of uOttawa in uOttaHack-7 Hackathon.<br>
+                               <a href="https://uottawa--development.gadget.app/#home" target="_blank" class="project-link">Visit Lost and Found Website</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-slide" data-tilt data-aos="fade-right">
+                        <img src="Images/PortfolioTest_Poster.jpeg" alt="Portfolio Test Automation">
+                        <div class="project-info">
+                            <h3>Automated Portfolio Testing (2024)</h3>
+                            <p>Automated testing of self-created portfolio using Selenium and TestNG frameworks.</p>
+                        </div>
+                    </div>
+                    <div class="project-slide" data-tilt data-aos="fade-right">
+                        <img src="Images/Poster_USC.jpg" alt="Weather Classifier">
+                        <div class="project-info">
+                            <h3>Weather Classifier (2024)</h3>
+                            <p>Machine Learning model for weather classification.</p>
+                        </div>
+                    </div>
+                    <div class="project-slide" data-tilt data-aos="fade-right">
+                        <img src="Images/SDN_Proeject.jpg" alt="SDN Study">
+                        <div class="project-info">
+                            <h3>SDN Edge-Cloud Study (2023)</h3>
+                            <p>Software Defined Network enhanced architecture.</p>
+                        </div>
+                    </div>
+                    <div class="project-slide" data-tilt data-aos="fade-right">
+                        <img src="Images/Anamoly_Detection.jpg" alt="Anomaly Detection">
+                        <div class="project-info">
+                            <h3>Anomaly Detection System (2021)</h3>
+                            <p>Deep Learning for IoT security.</p>
+                        </div>
+                    </div>
+                    <div class="project-slide" data-tilt data-aos="fade-right">
+                        <img src="Images/Control_Systems_Project.jpg" alt="Control Systems">
+                        <div class="project-info">
+                            <h3>Control Systems Analysis (2020)</h3>
+                            <p>Lyapunov Stability Analysis with EV Aggregator.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-arrow next" aria-label="Next project">❯</button>
         </div>
-    </div>
-</section>
-<section class="projects" id="projects">
-    <h1 class="projects-title">My<span>Projects</span></h1>
-    <div class="project-list">
-        <div>
-			<button class="proj-button" data-image="Images/Selenium_Python_SimplyHired.jpg">Automated testing of Job Search and Application Process on Simply Hired Website using Selenium and Pytest (2024)</button>
-			<button class="proj-button" data-image="Images/PortfolioTest_Poster.jpeg">Automated test of self-created portfolio using selenium and testng frameworks (2024)</button>
-			<button class="proj-button" data-image="Images/ChatBot Poster.jpg">Book Review Recommender ChatBot System using NLTK and DialogFlow (2024)</button>
-			<button class="proj-button" data-image="Images/Poster_USC.jpg">Weather Classifier using Machine Learning Model (2024)</button>
-            <button class="proj-button" data-image="Images/Linear_Regression.jpg">Coursera Guided Project: Linear Regression with NumPy and Python (2023)</button>
-            <button class="proj-button" data-image="Images/Web_APP_Python_Flask.jpg">Coursera Guided Project: Create your first Web App with Python and Flask (2024)</button>
-            <button class="proj-button" data-image="Images/SDN_Proeject.jpg">A study on Software Defined Network enhanced edge-cloud computing architecture (2023)</button>
-            <button class="proj-button" data-image="Images/Anamoly_Detection.jpg">Anomaly and attack detection system for IoT Architecture using Deep Learning (2021)</button>
-            <button class="proj-button" data-image="Images/Control_Systems_Project.jpg">Lyapunov Stability Analysis of Load Frequency Control Systems with Communication Network Induced Time-Delays and EV Aggregator (2020)</button>
-            <button class="proj-button" data-image="Images/Forest_Fire.jpg">Forest Fire Detection using Internet of Things (2020)</button>
+    </section>
+
+    <!-- My Apps Section -->
+    <section class="apps" id="apps">
+        <h1 class="section-title">My Apps</h1>
+        <div class="apps-list">
+            <div class="app-card" data-aos="fade-right" data-aos-delay="100">
+                <h3>eHospital</h3>
+                <p>AI-driven hospital management system with real-time analytics.</p>
+                <a href="https://www.e-hospital.ca/" target="_blank" class="app-link">Visit eHospital</a>
+            </div>
+            <div class="app-card" data-aos="fade-left" data-aos-delay="200">
+                <h3>Book Recommendation System</h3>
+                <p>An AI-driven book recommendation system using NLP and sentiment analysis.</p>
+                <a href="https://brs-front-end.vercel.app/" target="_blank" class="app-link">Visit Book Recommendation System</a>
+            </div>
+            <div class="app-card" data-aos="fade-right" data-aos-delay="300">
+                <h3>Lost and Found Website</h3>
+                <p>A simple Lost & Found website for uOttawa students, developed during uOttaHack-7.</p>
+                <a href="https://uottawa--development.gadget.app/#home" target="_blank" class="app-link">Visit Lost and Found Website</a>
+            </div>
         </div>
-    </div>
-</section>
-<section class="contact" id="contact">
-    <div class="contact-text">
-        <h2>Contact<span>Me</span></h2>
-        <h4>Let's work together!</h4>
-        <div class="contact-list">
-            <li><i class='bx bxs-send'></i>sharinibs@gmail.com</li>
-            <li><i class='bx bxs-phone'></i>+1 3437779798</li>
+    </section>
+
+	  <!-- Certifications Section -->
+	  <section class="certifications" id="certificates">
+        <h1 class="section-title">My Certifications</h1>
+        <div class="Certifications-list">
+            <div class="cert-card" data-image="Images/AZ_fundamentals.jpg" data-tilt data-aos="zoom-in">Microsoft Certified Azure Fundamentals</div>
+            <div class="cert-card" data-image="Images/AI_Data_Azure.png" data-tilt data-aos="zoom-in" data-aos-delay="100">Microsoft Certified Azure Data Fundamentals</div>
+            <div class="cert-card" data-image="Images/AI_Data_Azure.png" data-tilt data-aos="zoom-in" data-aos-delay="200">Microsoft Certified Azure AI Fundamentals</div>
+            <div class="cert-card" data-image="Images/CDART.png" data-tilt data-aos="zoom-in" data-aos-delay="300">CDART-Diploma in MultiLingual Programming Languages</div>
+            <div class="cert-card" data-image="Images/Coursera_ML.jpg" data-tilt data-aos="zoom-in" data-aos-delay="400">Coursera Certified- Machine Learning Foundation</div>
+            <div class="cert-card" data-image="Images/Coursera_Linear_Reg.jpg" data-tilt data-aos="zoom-in" data-aos-delay="500">Coursera Certified- Linear Regression with NumPy</div>
+            <div class="cert-card" data-image="Images/Coursera_Python_App.jpg" data-tilt data-aos="zoom-in" data-aos-delay="600">Coursera Certified- Web App with Python and Flask</div>
+            <div class="cert-card" data-image="Images/AI_Data_Azure.png" data-tilt data-aos="zoom-in" data-aos-delay="700">Microsoft Certified Azure Administrator</div>
         </div>
-        <ul class="contact-list">
-    <li><a href="https://www.linkedin.com/in/bssr2000/">LinkedIn</a></li>
-    <li><a href="https://github.com/Sharini2000">GitHub</a></li>
-</ul>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-text" data-aos="fade-right">
+            <h2 class="section-title">Contact Me</h2>
+            <h4>Let's Collaborate!</h4>
+            <div class="contact-list">
+                <li><i class="fas fa-envelope"></i> sharinibs@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +1 343-777-9798</li>
+            </div>
+            <ul class="contact-list">
+                <li><a href="https://www.linkedin.com/in/bssr2000/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/Sharini2000"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+        </div>
+        <div class="contact-form" data-aos="fade-left">
+            <form action="https://formspree.io/f/mzbnvdej" method="post">
+                <input type="text" name="name" placeholder="Please enter your name" required>
+                <input type="email" name="email" placeholder="Please enter your email address" required>
+                <input type="text" name="subject" placeholder="Enter subject here">
+                <textarea name="message" cols="40" rows="10" placeholder="Enter your message here" required></textarea>
+                <input type="submit" value="Submit" class="send">
+            </form>
+        </div>
+    </section>
+
+    <!-- Certification Modal -->
+    <div id="certModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="certImage">
     </div>
-    
-    <div class="contact-form">
-        <form action="https://formspree.io/f/mzbnvdej" method="post">
-            <input type="text" name="name" placeholder="Please enter your name" required>
-            <input type="email" name="email" placeholder="Please enter your email address" required>
-            <input type="text" name="subject" placeholder="Enter subject here">
-            <textarea name="message" cols="40" rows="10" placeholder="Enter your message here" required></textarea>
-            <input type="submit" value="Submit" class="send"> 
-        </form>
-    </div>
-	
-</section>
 
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
-<div id="certModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="certImage">
-</div>
-
-
-
-
-
-
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="main.js"></script>
-</section>
-
 </body>
 </html>
