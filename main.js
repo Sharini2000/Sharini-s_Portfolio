@@ -134,20 +134,7 @@ if (!carousel || !slides.length || !prevBtn || !nextBtn) {
         }
     });
 
-    // // Skills Progress Bars
-    // const progressBars = document.querySelectorAll('.progress');
-    // progressBars.forEach(progress => {
-    //     const width = progress.getAttribute('data-width');
-    //     setTimeout(() => {
-    //         progress.style.width = width;
-    //     }, 500); // Delay to ensure visibility
-    // });
-// Skills Progress Bars
-// const progressBars = document.querySelectorAll('.progress');
-// progressBars.forEach(progress => {
-//     const width = progress.parentElement.querySelector('.progress-label').textContent.match(/\((\d+%)\)/)[1]; // Extract the percentage (e.g., "90%")
-//     progress.style.width = width; // Set the width directly from the label
-// });
+
     // Custom Cursor
     const cursor = document.querySelector('.cursor');
     const follower = document.querySelector('.cursor-follower');
