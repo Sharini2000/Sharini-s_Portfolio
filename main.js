@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof Typed !== 'undefined') {
         try {
             new Typed('.text', {
-                strings: ['Software Developer', 'Automation Tester', 'AI Enthusiast', 'Innovator'],
-                typeSpeed: 30,
-                backSpeed: 10,
+                strings: ['Software Developer', 'Test Automation Developer', 'AI Enthusiast', 'Innovator'],
+                typeSpeed: 80,
+                backSpeed: 40,
                 loop: true,
                 startDelay: 700
             });
@@ -174,6 +174,13 @@ if (!carousel || !slides.length || !prevBtn || !nextBtn) {
         }
     });
 });
+function openModal(id) {
+  document.getElementById("modal-" + id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById("modal-" + id).style.display = "none";
+}
 
 
 // document.addEventListener('DOMContentLoaded', () => {
