@@ -272,13 +272,13 @@
     <h2 class="category-title">AI / Machine Learning</h2>
     <ul class="project-list">
       <li onclick="openModal('brs')">
-        <strong>📘 Book Recommendation System - Learn more here</strong>
+        <strong>📘 Book Recommendation System - A Full Stack Web App built using AI Engineering</strong>
       </li>
       <li onclick="openModal('weather')">
-        <strong>🌦️ Weather Classifier (2024) - Learn more here</strong>
+        <strong>🌦️ Weather Classifier (2024) - An AI/ML Model for weather classification</strong>
       </li>
       <li onclick="openModal('anomaly')">
-        <strong>🛡️ Anomaly Detection System (2021) - Learn more</strong>
+        <strong>🛡️ Anomaly Detection System (2021) - AI application</strong>
       </li>
     </ul>
   </div>
@@ -288,10 +288,10 @@
     <h2 class="category-title">Web Development</h2>
     <ul class="project-list">
       <li onclick="openModal('ehospital')">
-        <strong>🏥 EHospital - Learn more here</strong>
+        <strong>🏥 EHospital - An full stack web app for Hospital management that's empowered by AI solutions.</strong>
       </li>
       <li onclick="openModal('lostfound')">
-        <strong>🔎 Lost & Found Website - Learn more here</strong>
+        <strong>🔎 Lost & Found Website - A Lost and Found Website for University of Ottawa. Developed during uOttaHack7 hackathon.</strong>
       </li>
     </ul>
   </div>
@@ -301,10 +301,10 @@
     <h2 class="category-title">Automation & Testing</h2>
     <ul class="project-list">
       <li onclick="openModal('portfolio')">
-        <strong>🧪 Automated Testing of Portfolio Web App(2024) - Learn more here</strong>
+        <strong>🧪 Automated Testing of Portfolio Web App(2024) - Java, Selenium, TestNg and Maven integration project</strong>
       </li>
        <li onclick="openModal('SimplyHired')">
-        <strong>🛡️Automated Testing of SimplyHired Web App(2024) - Learn more here </strong>
+        <strong>🛡️Automated Testing of SimplyHired Web App(2024) - Selenium, Python and PyTest based project </strong>
       </li>
     </ul>
   </div>
@@ -320,7 +320,7 @@
         <strong>⚙️ Control Systems Analysis (2020)</strong>
       </li>
        <li onclick="openModal('anomaly')">
-        <strong>🛡️ Anomaly Detection System (2021) - Learn more</strong>
+        <strong>🛡️ Anomaly Detection System (2021) /strong>
       </li>
        <li onclick="openModal('forestfire')">
         <strong>🛡️ Forest Fire detection system (2021)</strong>
@@ -328,119 +328,6 @@
     </ul>
   </div>
 </section>
-
-<!-- Modals -->
-<div class="modal-container" id="modal-brs">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('brs')">&times;</span>
-    <h3>📘 Book Recommendation System</h3>
-    <p>
-      The Book Recommendation System project showcases my expertise as a Full Stack Developer, where I developed a web-based application designed to provide book recommendations, sentiment analysis, and topic-based feedback based on user queries. Leveraging Natural Language Processing (NLP) and a knowledge graph, the system analyzes book reviews and suggests relevant books by integrating a Flask and MySQL backend with a React frontend. Key technical features include book information and sentiment analysis, which extracts metadata (author, category, publisher) using a knowledge graph and analyzes review sentiment with TextBlob to determine overall book perception. The system employs Latent Dirichlet Allocation (LDA) to extract key discussion topics from book reviews, providing summarized insights into key book-related themes, and offers entity-based recommendations by identifying key entities (author, characters, themes) from reviews using SpaCy, suggesting books with overlapping entities and topics. WebSocket communication enables real-time responses using Flask-SocketIO, supporting both HTTP webhooks and WebSocket-based interactions. For testing, I utilized Postman for API testing, unit tests for recommendation algorithms and NLP, Socket.IO client for WebSocket testing, and manual UI testing for frontend validation. The deployment journey began with an AWS attempt using ECS (Docker) for the Flask backend, RDS for the MySQL database, and Amplify for the React frontend, though high costs and AWS free tier limitations posed challenges. Development tools included VS Code and Google Colabs, with GitHub for version control. 
-<br>
-      <a href="https://brs-front-end.vercel.app/" target="_blank">Visit Project</a>
-    </p>
-  </div>
-</div>
-
-<div class="modal-container" id="modal-weather">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('weather')">&times;</span>
-    <h3>🌦️ Weather Classifier (2024)</h3>
-    <p>
-      The "Weather Classifier Using Machine Learning Model" enhances weather prediction for agriculture, transportation, and disaster management. It addresses missing data via preprocessing, categorizing days and using filter/wrapper methods for feature interaction. EDA uncovers correlations through histograms, scatter plots, and box plots (e.g., temperature vs. dew point). Methodology includes concatenating 12 monthly CSV files, feature engineering with hourly data, season determination, and temperature difference calculations. Feature selection employs Mutual Information and a decision tree to identify key variables (season, weekday, temperature difference). Training compares SVM and RF using 3-fold cross-validation and GridSearchCV, with results showing RF outperforming SVM via stratified k-fold and hyperparameter tuning. Random Forest emerges as the top algorithm, improving meteorological forecasts by identifying critical factors like humidity and station pressure.
-      </p>
-  </div>
-</div>
-
-<div class="modal-container" id="modal-anomaly">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('anomaly')">&times;</span>
-    <h3>🛡️ Anomaly Detection System (2021)</h3>
-    <p>
-      Designed and implemented an IoT anomaly and attack detection system using deep learning, leveraging low-cost hardware like ESP32 and ESP8266. Developed an LSTM-based framework to detect deviations in device behavior, effectively identifying threats such as Denial of Service (DoS), malicious operations, and data probing. Classified seven attack types to enhance threat recognition across IoT networks. The system utilized LSTM for its strength in processing time-series data, improving accuracy and adaptability. Original datasets were collected and preprocessed with techniques like normalization and feature extraction to ensure data quality. The project demonstrated the scalability and cost-effectiveness of using affordable IoT nodes while addressing real-world cybersecurity threats. It offered valuable insights into the application of deep learning in securing IoT systems through innovative, research-driven problem solving.
-Tools/Skills: Python, TensorFlow/Keras, LSTM, ESP32, ESP8266, IoT Security, Time-Series Data, Data Preprocessing, Feature Engineering, Anomaly Detection, Attack Classification, Deep Learning, Supervised Learning
-    </p>
-  </div>
-</div>
-
-<div class="modal-container" id="modal-ehospital">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('ehospital')">&times;</span>
-    <h3>🏥 EHospital</h3>
-    <p>
-      AI-driven hospital management system built using React, Python, and Firebase with analytics dashboard, live updates, and integration with third-party healthcare APIs. 
-      Developed full-stack architecture using React, Python, Flask APIs, and MySQL/MongoDB that enabled easier appointment bookings for Doctor-Patient Consultation, Question-Answering Chatbot for real-time processing with user-friendly UI. Developed automated test frameworks for AI applications using Python, PyTest, and Postman, achieving 100% success across 20+ test cases for API and integration testing. Conducted performance testing and test data management, validating user stories to support software testing and community engagement. Designed cloud-deployed infrastructure with AWS EC2, Docker, and Amplify, aligning with SLA goals and reliability standards.<br>
-      <a href="https://www.e-hospital.ca/" target="_blank">Visit Project</a>
-    </p>
-  </div>
-</div>
-
-<div class="modal-container" id="modal-lostfound">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('lostfound')">&times;</span>
-    <h3>🔎 Lost & Found Website</h3>
-    <p>
-      Full-stack web app built at uOttaHack-7 to report and find lost items for uOttawa students. Features: item tagging, location mapping, and notification system.<br>
-      <a href="https://uottawa--development.gadget.app/#home" target="_blank">Visit Project</a>
-    </p>
-  </div>
-</div>
-
-<div class="modal-container" id="modal-portfolio">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('portfolio')">&times;</span>
-    <h3>🧪 Automated Portfolio Testing (2024)</h3>
-    <p>
-      Developed a robust UI automation framework to ensure complete functional test coverage for a personal portfolio website.
-Developed 50+ automated test cases using Java, Selenium WebDriver, TestNG, and Cucumber, achieving 100% test coverage across major features.
-Designed BDD-style test scripts with Gherkin syntax for improved readability and collaboration.
-Implemented test execution reports and failure logging, enabling faster debugging and validation cycles.
-Tools/Skills: Java, Selenium, TestNG, Cucumber, Gherkin, Maven, Page Object Model (POM), Automated Testing, UI Validation, Functional Testing
-</p>
-  </div>
-</div>
-
-<div class="modal-container" id="modal-sdn">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('sdn')">&times;</span>
-    <h3>🌐 SDN Edge-Cloud Study (2023)</h3>
-    <p>
-      Conducted a comparative study of SDN-enhanced cloud infrastructure using Mininet and Wireshark. Optimized latency and bandwidth routing strategies.
-    </p>
-  </div>
-</div>
-
-<div class="modal-container" id="modal-control">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('control')">&times;</span>
-    <h3>⚙️ Control Systems Analysis (2020)</h3>
-    <p>
-      Performed Lyapunov stability analysis on an electric vehicle aggregator system. Simulated scenarios using MATLAB Simulink and validated energy efficiency.
-    </p>
-  </div>
-</div>
-
-<div class="modal-container" id="modal-SimplyHired">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('control')">&times;</span>
-    <h3>⚙️ Automated Testing of SimplyHired Web App</h3>
-    <p>
-      Designed a test automation framework to validate search functionality and filter performance on the SimplyHired job platform.
-•	Developed reusable UI test scripts using Python, Selenium, and PyTest, enabling test execution and reporting with high reliability.
-•	Integrated the framework with Jenkins and GitHub for continuous integration and automated regression testing, reducing manual QA efforts by 60%.
-•	Implemented test data generation, DOM inspection, and modular test case development for long-term maintainability.
-Tools/Skills: Python, Selenium, PyTest, Jenkins, GitHub, HTML DOM, CI/CD, Automated Testing, Regression Testing
-Tools/Skills: Python, Scikit-learn, SVM, Random Forest, GridSearchCV, Pandas, NumPy, Matplotlib, GitHub 
-    </p>
-  </div>
-</div>
-
-<style>
-  .project-list li {
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-</style>
 
     <!-- My Apps Section -->
     <section class="apps" id="apps">
