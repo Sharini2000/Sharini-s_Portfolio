@@ -160,6 +160,24 @@ if (!carousel || !slides.length || !prevBtn || !nextBtn) {
             backToTop.classList.remove('show');
         }
     });
+
+    // Mobile Hamburger Menu
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.navbar');
+
+    hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    
+    // Change icon to X when open
+    const icon = hamburger.querySelector('i');
+    if (navbar.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+    });
 });
 function openModal(id) {
   document.getElementById("modal-" + id).style.display = "block";

@@ -133,6 +133,41 @@ body.dark-mode .cert-card {
     color: #F5C6D6;
 }
 
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #F5C6D6;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(75, 46, 131, 0.98);
+    flex-direction: column;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+  .navbar.active {
+    display: flex;
+  }
+  .navbar a {
+    margin: 15px 30px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
 /* Header */
 .header {
     position: sticky;
@@ -827,5 +862,93 @@ body.dark-mode .cert-card {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/* ============= RESPONSIVE DESIGN ============= */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  /* HOME */
+  .home-content h1 {
+    font-size: 2.8rem;
+  }
+  .home-content h3 {
+    font-size: 1.6rem;
+  }
+  .home-content p {
+    font-size: 1.1rem;
+  }
+
+  /* ABOUT */
+  .about {
+    flex-direction: column;
+    padding: 80px 20px;
+    gap: 40px;
+  }
+  .about-img img {
+    width: 220px;
+  }
+
+  /* EXPERIENCE - Timeline */
+  .experience {
+    padding: 80px 20px;
+  }
+  .timeline::before {
+    left: 31px;
+  }
+  .timeline-item {
+    width: 100% !important;
+    left: 0 !important;
+    padding-left: 70px;
+    margin-bottom: 50px;
+  }
+  .timeline-item::before {
+    left: 20px !important;
+  }
+
+  /* SKILLS */
+  .services-list {
+    gap: 20px;
+  }
+  .skill-card {
+    width: 100%;
+  }
+
+  /* CONTACT */
+  .contact {
+    flex-direction: column;
+    padding: 80px 20px;
+    gap: 40px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  /* APPS, PROJECTS, CERTIFICATIONS */
+  .apps-list,
+  .Certifications-list {
+    gap: 20px;
+  }
+  .app-card,
+  .cert-card {
+    width: 100%;
+  }
+
+  /* General section padding */
+  section {
+    padding: 80px 20px !important;
+  }
+
+  /* Smaller fonts everywhere */
+  body {
+    font-size: 15px;
   }
 }
